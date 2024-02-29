@@ -1,79 +1,65 @@
 import React from 'react'
-
+import '../App.css';
 function Recomendaciones() {
+  const recomendaciones = [
+    {
+      imagen: "https://edm.com/.image/ar_16:9%2Cc_fill%2Ccs_srgb%2Cg_faces:center%2Cq_auto:good%2Cw_768/MTYzNDMxNjI5Mjc1MDE0NDk4/salvatore-ganacci-horse.png",
+      nombre: "Horse",
+      artista: "Salvatore Ganacci"
+    },
+    {
+        imagen: "https://i.ytimg.com/vi/5NzmS2IzG-g/maxresdefault.jpg",
+        nombre: "Kong 2.0",
+        artista: "Steve Aoki, Natanael Cano"
+      },
+      {
+        imagen: "https://i.ytimg.com/vi/NZ1cVn6wxLE/maxresdefault.jpg",
+        nombre: "Proyecto X",
+        artista: "Gabito Ballesteros, Natanael Cano"
+      },
+      {
+        imagen: "https://i.scdn.co/image/ab67616d0000b273e2e093427065eaca9e2f2970",
+        nombre: "Pancake",
+        artista: "Natanael Cano, Peso Pluma"
+      },
+      {
+        imagen: "https://edm.com/.image/ar_16:9%2Cc_fill%2Ccs_srgb%2Cg_faces:center%2Cq_auto:good%2Cw_768/MTYzNDMxNjI5Mjc1MDE0NDk4/salvatore-ganacci-horse.png",
+        nombre: "Horse",
+        artista: "Salvatore Ganacci"
+      },
+      {
+          imagen: "https://i.ytimg.com/vi/5NzmS2IzG-g/maxresdefault.jpg",
+          nombre: "Kong 2.0",
+          artista: "Steve Aoki, Natanael Cano"
+        },
+        {
+          imagen: "https://i.ytimg.com/vi/NZ1cVn6wxLE/maxresdefault.jpg",
+          nombre: "Proyecto X",
+          artista: "Gabito Ballesteros, Natanael Cano"
+        },
+        {
+          imagen: "https://i.scdn.co/image/ab67616d0000b273e2e093427065eaca9e2f2970",
+          nombre: "Pancake",
+          artista: "Natanael Cano, Peso Pluma"
+        },
+    
+  ];
+
   return (
     <div className="containerReco">
       <div className="recomendacion">
-        <div className="recomendacion__item">
-          <img src="https://edm.com/.image/ar_16:9%2Cc_fill%2Ccs_srgb%2Cg_faces:center%2Cq_auto:good%2Cw_768/MTYzNDMxNjI5Mjc1MDE0NDk4/salvatore-ganacci-horse.png" alt="Imagen Canción 1" className="recomendacion__imagen"/>
-          <div className="recomendacion__detalles">
-            <div className="recomendacion__nombre">Horse</div>
-            <div className="recomendacion__artista">Salvatore Ganacci</div>
+        {recomendaciones.map((recomendacion, index) => (
+          <div className="recomendacion__item" key={index}>
+            <img src={recomendacion.imagen} alt={`Imagen Canción ${index + 1}`} className="recomendacion__imagen"/>
+            <div className="recomendacion__detalles">
+              <div className="recomendacion__nombre">{recomendacion.nombre}</div>
+              <div className="recomendacion__artista">{recomendacion.artista}</div>
+            </div>
+            <button className="recomendacion__boton">Reproducir</button>
           </div>
-          <button className="recomendacion__boton">Reproducir</button>
-        </div>
-
-        <div className="recomendacion__item">
-  <img src="https://www.eleconomista.com.mx/__export/1563851481284/sites/eleconomista/img/2019/07/22/bohemian-rhapsody-queen-cine-especial.jpg_1902800913.jpg" alt="Imagen Canción 1" className="recomendacion__imagen"/>
-  <div className="recomendacion__detalles">
-    <div className="recomendacion__nombre">Bohemian Rhapsody</div>
-    <div className="recomendacion__artista">Queen</div>
-  </div>
-  <button className="recomendacion__boton">Reproducir</button>
-</div>
-<div className="recomendacion__item">
-  <img src="https://i.pinimg.com/736x/53/7e/c7/537ec739cf866002902f71d3730bea0c.jpg" alt="Imagen Canción 2" className="recomendacion__imagen"/>
-  <div className="recomendacion__detalles">
-    <div className="recomendacion__nombre">Like a Rolling Stone</div>
-    <div className="recomendacion__artista">Bob Dylan</div>
-  </div>
-  <button className="recomendacion__boton">Reproducir</button>
-</div>
-<div className="recomendacion__item">
-  <img src="https://eltrasterodepalacio.files.wordpress.com/2011/10/imagine-john-lennon-02.jpg" alt="Imagen Canción 3" className="recomendacion__imagen"/>
-  <div className="recomendacion__detalles">
-    <div className="recomendacion__nombre">Imagine</div>
-    <div className="recomendacion__artista">John Lennon</div>
-  </div>
-  <button className="recomendacion__boton">Reproducir</button>
-</div>
-<div className="recomendacion__item">
-  <img src="https://i1.sndcdn.com/artworks-000056560134-e5jivw-t500x500.jpg" alt="Imagen Canción 4" className="recomendacion__imagen"/>
-  <div className="recomendacion__detalles">
-    <div className="recomendacion__nombre">One</div>
-    <div className="recomendacion__artista">U2</div>
-  </div>
-  <button className="recomendacion__boton">Reproducir</button>
-</div>
-<div className="recomendacion__item">
-  <img src="https://i.scdn.co/image/ab67616d0000b2739eb690cb054df293fe7711b8" alt="Imagen Canción 5" className="recomendacion__imagen"/>
-  <div className="recomendacion__detalles">
-    <div className="recomendacion__nombre">Billie Jean</div>
-    <div className="recomendacion__artista">Michael Jackson</div>
-  </div>
-  <button className="recomendacion__boton">Reproducir</button>
-</div>
-<div className="recomendacion__item">
-  <img src="https://i.scdn.co/image/ab67616d0000b2739eb690cb054df293fe7711b8" alt="Imagen Canción 5" className="recomendacion__imagen"/>
-  <div className="recomendacion__detalles">
-    <div className="recomendacion__nombre">Billie Jean</div>
-    <div className="recomendacion__artista">Michael Jackson</div>
-  </div>
-  <button className="recomendacion__boton">Reproducir</button>
-</div>
-<div className="recomendacion__item">
-  <img src="https://i.scdn.co/image/ab67616d0000b2739eb690cb054df293fe7711b8" alt="Imagen Canción 5" className="recomendacion__imagen"/>
-  <div className="recomendacion__detalles">
-    <div className="recomendacion__nombre">Billie Jean</div>
-    <div className="recomendacion__artista">Michael Jackson</div>
-  </div>
-  <button className="recomendacion__boton">Reproducir</button>
-</div>
-
+        ))}
       </div>
     </div>
-
-    
   )
 }
 

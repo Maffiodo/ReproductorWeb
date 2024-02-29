@@ -1,21 +1,24 @@
-import './App.css';
-import Footer from './componentes/Footer';
-import NavbarBuscador from './componentes/NavbarBuscador';
-import Recomendaciones from './componentes/Recomendaciones';
-import Reproductor from './componentes/Reproductor';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+
 import Login from './paginas/Login';
+import Index from './paginas/Index'; // O el nombre correcto del componente principal
 
 function App() {
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  const handleLogin = () => {
+    // Lógica para manejar el inicio de sesión
+    setLoggedIn(true);
+  };
+
   return (
-    <div>
-      <header>
-        <NavbarBuscador />  
-      </header>
-      <div className="containerRepro">
-      <Recomendaciones />
-        <Reproductor />
-      </div>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={loggedIn ? <Index /> : <Login onLogin={handleLogin} />} />
+      </Routes>
+    </Router>
   );
 }
 
