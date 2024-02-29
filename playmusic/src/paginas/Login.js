@@ -15,7 +15,7 @@ function Login() {
                         <h1>Música <br/> Para <br/> Todos</h1>
                 </div>
                 <div className='right-col'>
-                 <a2 href='#app'>Ingresa a SoundWave</a2>
+                 <a href='#app'>Ingresa a SoundWave</a>
                 </div>
             </div>
             <div>
