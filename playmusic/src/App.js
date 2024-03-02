@@ -1,25 +1,12 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-
+import Index from './paginas/Index'; 
 import Login from './paginas/Login';
-import Index from './paginas/Index'; // O el nombre correcto del componente principal
+
+const code = new URLSearchParams(window.location.search).get("code")
 
 function App() {
-  const [loggedIn, setLoggedIn] = useState(false);
-
-  const handleLogin = () => {
-    // Lógica para manejar el inicio de sesión
-    setLoggedIn(true);
-  };
-
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={loggedIn ? <Index /> : <Login onLogin={handleLogin} />} />
-      </Routes>
-    </Router>
-  );
+  return code ? <Index code={code} /> : <Login />
 }
 
-export default App;
+export default App
+

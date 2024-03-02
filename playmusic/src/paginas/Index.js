@@ -4,6 +4,7 @@ import NavbarBuscador from '../componentes/NavbarBuscador';
 import Recomendaciones from '../componentes/Recomendaciones';
 import Reproductor from '../componentes/Reproductor';
 
+
 function Index() {
   return (
     <div>
