@@ -1,0 +1,112 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.containerlogin{
+  height: 100vh;
+  width: 100%;
+  background-image: url("https://images.unsplash.com/photo-1636144106497-9014d58248bc?q=80&w=1664&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.contentlogins{
+  width: 100%;
+  position: absolute;
+  top: 30%;
+}
+
+.left-col{
+  margin-left: 6%;
+
+}
+
+.left-col h1{
+  font-size: 80px;
+  color: #fff;
+  margin-bottom: 110px;
+  float: left;
+  
+}
+
+.right-col{
+  float: right;
+  margin-right: 6%;
+  margin-top: 120px;
+  display: flex;
+  align-items: center;
+}
+
+.right-col P{
+  font-size: 20px;
+  color: #5f5f5f;
+  font-weight: 400;
+  margin-right: 15px;
+  font-weight: 400;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card h4 {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.card p {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #666;
+}
