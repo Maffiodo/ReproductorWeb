@@ -19,6 +19,7 @@ class Reproductor extends React.Component {
 
     return (
       <div className="containerRepro">
+        <p>Reproductor</p>
         <h3>Resultados de búsqueda:</h3>
         <div className="card-container">
           {searchResults.map((track, index) => (
